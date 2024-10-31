@@ -1,0 +1,63 @@
+/* src/components/header/Header.style.css */
+
+/* Ajustes gerais do Header */
+.header-container {
+  display: flex;
+  justify-content: space-between; /* Deixa o logo e o menu nas extremidades */
+  align-items: center; /* Alinha os itens verticalmente no centro */
+  padding: 10px 20px;
+  background-color: #4a90e2; /* Cor azul para o fundo */
+  color: white;
+}
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+  }
+
+  .hamburger-menu {
+    display: none; /* Por padrão, ocultamos o ícone */
+  }
+
+  /* Ajustes para telas menores */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+   .hamburger-menu {
+    display: block; /* Mostra o ícone do menu */
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: auto; /* Alinha o ícone à direita */
+  }
+
+  /* Esconde os links do menu quando a tela é menor */
+  .nav-menu ul {
+    display: none;
+  }
+
+  /* Mostra os links do menu quando o ícone for clicado */
+  .nav-menu.active ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+}
